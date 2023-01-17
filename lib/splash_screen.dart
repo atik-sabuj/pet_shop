@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -38,6 +38,7 @@ class SecondScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Adopt a Friend"),),
       body: Container(
+        color: Color(0xffFDFDFF),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -145,39 +146,68 @@ class SecondScreen extends StatelessWidget {
                 height: 16,
               ),
 
-              Container(
-                  height: 140,
-                  width: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10), // <= No more error here :)
-                    color: Colors.purple.withOpacity(.4),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(8),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(
-                          width: 120,
-                          child: Padding(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Card(
+                    elevation: 8,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      //set border radius more than 50% of height and width to make circle
+                    ),
+                    child: SizedBox(
+                        height: 140,
+                        width: 170,
+                        child: Padding(
+                          padding: EdgeInsets.all(8),
+                          child:  Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                  child: Image.asset("images/shop.png",fit: BoxFit.cover,)
-                              ),
-                              Text("     Shop",style: TextStyle(fontSize: 20,color: Colors.black,height: .2),),
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Image.asset("images/pet-shop.png",fit: BoxFit.cover,height: 50,width: 50,),
+                                SizedBox(height: 8,),
+                                Text("Shop",style: TextStyle(fontSize: 20,color: Colors.black,height: .2),),
 
-                            ],
+                              ],
+                            ),
                           ),
-                          ),
-                        ),
-                      ],
+
+                        )
                     ),
+                  ),
 
-                  )
+
+                  Card(
+                    elevation: 8,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      //set border radius more than 50% of height and width to make circle
+                    ),
+                    child: SizedBox(
+                        height: 140,
+                        width: 170,
+                        child: Padding(
+                          padding: EdgeInsets.all(8),
+                          child:  Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Image.asset("images/dog_adoption.png",fit: BoxFit.cover,height: 50,width: 50,),
+                                SizedBox(height: 8,),
+                                Text("Pet Adoptions",style: TextStyle(fontSize: 20,color: Colors.black,height: .2),),
+
+                              ],
+                            ),
+                          ),
+
+                        )
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
