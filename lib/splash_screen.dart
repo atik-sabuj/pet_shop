@@ -54,7 +54,6 @@ class SecondScreen extends StatelessWidget {
                         keyboardType: TextInputType.text,
                         decoration: InputDecoration(
                           hintText: 'Search...',
-
                           prefixIcon: Icon(Icons.search,color: Colors.red,),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
@@ -81,9 +80,7 @@ class SecondScreen extends StatelessWidget {
                               width: 1,
                               color: Colors.blueAccent
                             ),
-
                           borderRadius: BorderRadius.circular(12),
-
                           boxShadow: [
                             BoxShadow(
                               color: Colors.blueAccent.withOpacity(0.5),
@@ -92,7 +89,6 @@ class SecondScreen extends StatelessWidget {
                               offset: Offset(0, 3), // changes position of shadow
                             ),
                           ],
-
                         ),
                         child: Icon(Icons.sort, color: Colors.white,size: 24,),
                       ),
@@ -101,7 +97,6 @@ class SecondScreen extends StatelessWidget {
                   ],
                 ),
               ),
-
               SizedBox(
                 height: 16,
               ),
@@ -111,14 +106,10 @@ class SecondScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10), // <= No more error here :)
                     color: Colors.purple.withOpacity(.4),
                   ),
-
-
-
                 child: Padding(
                   padding: EdgeInsets.all(16),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
                     children: [
                       SizedBox(
                         width: 150,
@@ -127,7 +118,6 @@ class SecondScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text("Pet Adoption made easy",style: TextStyle(fontSize: 24,color: Colors.white,height: 1.2),),
-
                             ElevatedButton(onPressed: (){},
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.blueAccent,
@@ -140,20 +130,55 @@ class SecondScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-
                       Expanded(
                          child: Container(
                              child: Image.asset("images/dogs.png",fit: BoxFit.cover,)
                          ),
                       )
                     ],
-
-
                   ),
                 )
               ),
 
 
+              SizedBox(
+                height: 16,
+              ),
+
+              Container(
+                  height: 140,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10), // <= No more error here :)
+                    color: Colors.purple.withOpacity(.4),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(8),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: 120,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                  child: Image.asset("images/shop.png",fit: BoxFit.cover,)
+                              ),
+                              Text("     Shop",style: TextStyle(fontSize: 20,color: Colors.black,height: .2),),
+
+                            ],
+                          ),
+                          ),
+                        ),
+                      ],
+                    ),
+
+                  )
+              ),
             ],
           ),
         ),
