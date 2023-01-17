@@ -21,12 +21,22 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.deepPurple,
-      child: Image.asset(
-        "images/logo.png",
-        height: 30,
-        width: 30,
+    return Scaffold(
+      backgroundColor: Colors.deepPurple,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+/*            height: 200,
+            width: 200,*/
+            child: Image.asset(
+              "images/logo.png",
+             /* height: 30,
+              width: 30,*/
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -198,7 +208,7 @@ class SecondScreen extends StatelessWidget {
                               children: [
                                 Image.asset("images/dog_adoption.png",fit: BoxFit.cover,height: 50,width: 50,),
                                 SizedBox(height: 8,),
-                                Text("Pet Adoptions",style: TextStyle(fontSize: 20,color: Colors.black,height: .2),),
+                                Text("Adoptions",style: TextStyle(fontSize: 20,color: Colors.black,height: .2),),
 
                               ],
                             ),
