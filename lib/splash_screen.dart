@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:pet_shop/model/category.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -44,7 +45,14 @@ class _SplashScreenState extends State<SplashScreen> {
 }
 
 class SecondScreen extends StatelessWidget {
-  final List<String> names = <String>['Topic 1', 'Topic 2 ', 'Topic 3', 'Topic 4', 'Topic 5',];
+  final List<Category> categoryList = [
+    Category(name: "Cat",image: "images/cat logo.png"),
+    Category(name: "Dog",image: "images/dog logo.png"),
+    Category(name: "Bird",image: "images/bird logo.png"),
+    Category(name: "Rabbit",image: "images/cat logo.png"),
+    Category(name: "Others",image: "images/cat logo.png"),
+
+  ];
 
 
   @override
@@ -290,116 +298,11 @@ class SecondScreen extends StatelessWidget {
                 SizedBox(
                   height: 16,
                 ),
-                Row(
-                  children: <Widget>[
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40),
-                        //set border radius more than 50% of height and width to make circle
-                      ),
-                      child: Container(
-                          width: 100,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                            // <= No more error here :)
-                            color: Colors.purple.withOpacity(.4),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(40.0),
-                                child: Container(
-                                  color: Colors.white,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Image.asset(
-                                      "images/cat logo.png",
-                                      height: 30.0,
-                                      width: 30.0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(width: 8,),
-                              Text('Cat'),
-                            ],
-                          )
-                      ),
-                    ),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40),
-                        //set border radius more than 50% of height and width to make circle
-                      ),
-                      child: Container(
-                          width: 100,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                            // <= No more error here :)
-                            color: Colors.purple.withOpacity(.4),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(40.0),
-                                child: Container(
-                                  color: Colors.white,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Image.asset(
-                                      "images/dog logo.png",
-                                      height: 30.0,
-                                      width: 30.0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(width: 8,),
-                              Text('Dog'),
-                            ],
-                          )
-                      ),
-                    ),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40),
-                        //set border radius more than 50% of height and width to make circle
-                      ),
-                      child: Container(
-                          width: 100,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                            // <= No more error here :)
-                            color: Colors.purple.withOpacity(.4),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(40.0),
-                                child: Container(
-                                  color: Colors.white,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Image.asset(
-                                      "images/bird logo.png",
-                                      height: 30.0,
-                                      width: 30.0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(width: 8,),
-                              Text('Bird'),
-                            ],
-                          )
-                      ),
-                    ),
 
-                  ],
-                ),
+
+                showCategoryList(),//Category List like Cat,Dog,Bird and others
+
+
                 SizedBox(
                   height: 16,
                 ),
@@ -515,69 +418,60 @@ class SecondScreen extends StatelessWidget {
 
 
 
-                ListView.builder(
-                    shrinkWrap: true,
-                    padding: const EdgeInsets.all(8),
-                    itemCount: names.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        height: 50,
-                        margin: EdgeInsets.all(2),
-                        // color: msgCount[index]>=10? Colors.blue[400] msgCount[index]>3? Colors.blue[100]: Colors.grey,
-                        child: Container(
-                          child: Padding(
-                            padding:EdgeInsets.fromLTRB(3, 0,0,0),
-                            child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.stretch,
-                                children:[
-                                  Expanded(
-                                    child: TextButton(
 
-                                      onPressed: () {
-
-                                        print("Do something!");
-
-                                      },
-                                      style: ButtonStyle(
-                                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-
-
-                                          minimumSize:MaterialStateProperty.all(Size(double.infinity, 14)),
-                                          shape: MaterialStateProperty.all(
-                                            RoundedRectangleBorder(
-                                                borderRadius: BorderRadius.circular(40.0)),
-                                          ),
-
-
-                                          backgroundColor:
-                                          MaterialStateProperty.all(
-
-                                              Colors.white
-
-                                          )),
-
-                                      child:Text('${names[index]} ',
-                                        style: TextStyle(fontSize: 18),
-                                        textAlign: TextAlign.left,
-
-
-                                      ),
-                                    ),
-
-                                  ),
-                                ]
-
-                            ),
-                          ),
-                        ),
-                      );
-                    }
-                )
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  showCategoryList() {
+    return  SizedBox(
+      height: 70,
+      child: ListView.builder(
+          shrinkWrap: true,
+          scrollDirection: Axis.horizontal,
+          padding: const EdgeInsets.all(8),
+          itemCount: categoryList.length,
+          itemBuilder: (BuildContext context, int index) {
+            return   Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(40),
+                //set border radius more than 50% of height and width to make circle
+              ),
+              child: Container(
+                  width: 100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+                    // <= No more error here :)
+                    color: Colors.purple.withOpacity(.4),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(40.0),
+                        child: Container(
+                          color: Colors.white,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Image.asset(
+                              categoryList[index].image.toString(),
+                              height: 30.0,
+                              width: 30.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 8,),
+                      Text(categoryList[index].name.toString()),
+                    ],
+                  )
+              ),
+            );
+          }
       ),
     );
   }
