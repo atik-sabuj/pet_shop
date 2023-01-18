@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:pet_shop/model/category.dart';
+import 'package:pet_shop/model/features.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -45,15 +45,6 @@ class _SplashScreenState extends State<SplashScreen> {
 }
 
 class SecondScreen extends StatelessWidget {
-  final List<Category> categoryList = [
-    Category(name: "Cat",image: "images/cat logo.png"),
-    Category(name: "Dog",image: "images/dog logo.png"),
-    Category(name: "Bird",image: "images/bird logo.png"),
-    Category(name: "Rabbit",image: "images/cat logo.png"),
-    Category(name: "Others",image: "images/cat logo.png"),
-
-  ];
-
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +71,10 @@ class SecondScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SizedBox(
-                        width: MediaQuery.of(context).size.width - 90,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width - 90,
                         child: TextField(
                           textAlign: TextAlign.start,
                           keyboardType: TextInputType.text,
@@ -111,7 +105,7 @@ class SecondScreen extends StatelessWidget {
                             shape: BoxShape.rectangle,
                             color: Colors.blueAccent,
                             border:
-                                Border.all(width: 1, color: Colors.blueAccent),
+                            Border.all(width: 1, color: Colors.blueAccent),
                             borderRadius: BorderRadius.circular(12),
                             boxShadow: [
                               BoxShadow(
@@ -119,7 +113,7 @@ class SecondScreen extends StatelessWidget {
                                 spreadRadius: 2,
                                 blurRadius: 3,
                                 offset:
-                                    Offset(0, 3), // changes position of shadow
+                                Offset(0, 3), // changes position of shadow
                               ),
                             ],
                           ),
@@ -168,7 +162,8 @@ class SecondScreen extends StatelessWidget {
                                       backgroundColor: Colors.blueAccent,
                                       foregroundColor: Colors.white,
                                       shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(8.0),
+                                        borderRadius: BorderRadius.circular(
+                                            8.0),
                                       ),
                                     ),
                                     child: Text(
@@ -180,9 +175,9 @@ class SecondScreen extends StatelessWidget {
                           Expanded(
                             child: Container(
                                 child: Image.asset(
-                              "images/dogs.png",
-                              fit: BoxFit.cover,
-                            )),
+                                  "images/dogs.png",
+                                  fit: BoxFit.cover,
+                                )),
                           )
                         ],
                       ),
@@ -207,7 +202,8 @@ class SecondScreen extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment: MainAxisAlignment
+                                    .spaceAround,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Image.asset(
@@ -245,7 +241,8 @@ class SecondScreen extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment: MainAxisAlignment
+                                    .spaceAround,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Image.asset(
@@ -300,7 +297,7 @@ class SecondScreen extends StatelessWidget {
                 ),
 
 
-                showCategoryList(),//Category List like Cat,Dog,Bird and others
+                showCategoryList(), //Category List like Cat,Dog,Bird and others
 
 
                 SizedBox(
@@ -330,94 +327,9 @@ class SecondScreen extends StatelessWidget {
                 SizedBox(
                   height: 16,
                 ),
-                Container(
-                    height: 100,
-                    width: 180,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      // <= No more error here :)
-                      color: Colors.blueAccent.withOpacity(.6),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.all(8),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            width: 16,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                  child: Image.asset(
-                                "images/cat1.png",
-                                fit: BoxFit.cover,
-                              )),
-                            ],
-                          ),
-                        ],
-                      ),
-                    )),
-                SizedBox(
-                  height: 16,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "Bella",
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                          height: .4),
-                    ),
-                    Text(
-                      "BDT 5000",
-                      style: TextStyle(
-                          fontSize: 16, color: Colors.black, height: .4),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 16,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "Female",
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                          height: .4),
-                    ),
-                    Text(
-                      "2 Years",
-                      style: TextStyle(
-                          fontSize: 16, color: Colors.black, height: .4),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 16,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    //Icon(Icons.location_on),
-                    Text(
-                      "Mohammadpur(2 km)",
-                      style: TextStyle(
-                          fontSize: 16, color: Colors.black87, height: .4),
-                    ),
-                  ],
-                ),
 
 
-
+                showFeaturesList(),
 
               ],
             ),
@@ -428,7 +340,7 @@ class SecondScreen extends StatelessWidget {
   }
 
   showCategoryList() {
-    return  SizedBox(
+    return SizedBox(
       height: 70,
       child: ListView.builder(
           shrinkWrap: true,
@@ -436,10 +348,9 @@ class SecondScreen extends StatelessWidget {
           padding: const EdgeInsets.all(8),
           itemCount: categoryList.length,
           itemBuilder: (BuildContext context, int index) {
-            return   Card(
+            return Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(40),
-                //set border radius more than 50% of height and width to make circle
               ),
               child: Container(
                   width: 100,
@@ -475,4 +386,61 @@ class SecondScreen extends StatelessWidget {
       ),
     );
   }
+
+  showFeaturesList() {
+    return SizedBox(
+      height: 150,
+      child: ListView.builder(
+          shrinkWrap: true,
+          scrollDirection: Axis.horizontal,
+          padding: const EdgeInsets.all(8),
+          itemCount: featuresList.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+
+             child:  Container(
+                 height: 100,
+                 width: 180,
+                 decoration: BoxDecoration(
+                   borderRadius: BorderRadius.circular(10),
+                   // <= No more error here :)
+                   color: Colors.blueAccent.withOpacity(.6),
+                 ),
+                 child: Padding(
+                   padding: EdgeInsets.all(8),
+                   child: Row(
+                     mainAxisAlignment: MainAxisAlignment.start,
+                     children: [
+                       ClipRRect(
+                         borderRadius: BorderRadius.circular(40.0),
+                         child: Container(
+                           color: Colors.white,
+                           child: Padding(
+                             padding: const EdgeInsets.all(8.0),
+                             child: Image.asset(
+                               featuresList[index].image.toString(),
+                               height: 200.0,
+                               width: 30.0,
+                             ),
+                           ),
+                         ),
+                       ),
+                       SizedBox(width: 8,),
+                       Text(featuresList[index].name.toString()),
+                       SizedBox(width: 8,),
+                       Text(featuresList[index].price.toString()),
+                     ],
+                   ),
+                 )),
+
+            );
+          }
+      ),
+    );
+  }
 }
+
+
