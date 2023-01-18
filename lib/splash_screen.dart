@@ -219,10 +219,26 @@ class SecondScreen extends StatelessWidget {
                   ),
                 ],
               ),
+
+              SizedBox(
+                height: 18,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Categories",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black,height: .4),),
+                  Text("view all",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.lightBlue,height: .4),),
+                ],
+              ),
+
+
+
             ],
           ),
         ),
       ),
+
+
 
     );
   }
