@@ -328,6 +328,28 @@ class SecondScreen extends StatelessWidget {
                 ],
               ),
 
+              SizedBox(
+                height: 16,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text("Female",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.black,height: .4),),
+                  Text("2 Years",style: TextStyle(fontSize: 16,color: Colors.black,height: .4),),
+                ],
+              ),
+
+              SizedBox(
+                height: 16,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  //Icon(Icons.location_on),
+                  Text("Mohammadpur(2 km)",style: TextStyle(fontSize: 16,color: Colors.black87,height: .4),),
+                ],
+              ),
+
             ],
           ),
         ),
