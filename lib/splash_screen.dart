@@ -46,8 +46,15 @@ class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Adopt a Friend"),),
-      
+      appBar: AppBar(title: Text("Adopt a Friend"),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.notifications),
+          )
+        ],
+      ),
+
       body: Container(
         color: Color(0xffFDFDFF),
         child: Padding(
