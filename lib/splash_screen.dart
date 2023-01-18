@@ -235,7 +235,7 @@ class SecondScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("Categories",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black,height: .4),),
-                  Text("view all",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.lightBlue,height: .4),),
+                  Text("View all",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.lightBlue,height: .4),),
                 ],
               ),
 
@@ -256,7 +256,7 @@ class SecondScreen extends StatelessWidget {
                           Expanded(
                             child: ListTile(
                               leading: CircleAvatar(
-                                backgroundImage: AssetImage("images/dog logo.png",), // no matter how big it is, it won't overflow
+                                backgroundImage: AssetImage("images/dog logo.png",),
                               ),
                               title: Text('Dog'),
                             ),
@@ -265,7 +265,7 @@ class SecondScreen extends StatelessWidget {
                           Expanded(
                             child: ListTile(
                               leading: CircleAvatar(
-                                backgroundImage: AssetImage("images/bird logo.png",), // no matter how big it is, it won't overflow
+                                backgroundImage: AssetImage("images/bird logo.png",),
                               ),
                               title: Text('Bird'),
                             ),
@@ -273,9 +273,46 @@ class SecondScreen extends StatelessWidget {
 
 
                         ],
-                      )
+                      ),
 
+              SizedBox(
+                height: 16,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Our picks for you",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black,height: .4),),
+                  Text("View all",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.lightBlue,height: .4),),
+                ],
+              ),
 
+              SizedBox(
+                height: 16,
+              ),
+              Container(
+                  height: 100,
+                  width: 180,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10), // <= No more error here :)
+                    color: Colors.purple.withOpacity(.4),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(8),
+                    child:
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          width: 16,
+                        ),
+                        Container(
+                              child: Image.asset("images/dogs.png",fit: BoxFit.cover,)
+                          ),
+                      ],
+                    ),
+                  )
+              ),
 
             ],
           ),
