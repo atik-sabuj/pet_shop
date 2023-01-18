@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
 /*            height: 200,
             width: 200,*/
             child: Image.asset(
-              "images/logo.png",
+              "images/logo paw.png",
              /* height: 30,
               width: 30,*/
             ),
@@ -47,6 +47,7 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Adopt a Friend"),),
+      
       body: Container(
         color: Color(0xffFDFDFF),
         child: Padding(
@@ -221,7 +222,7 @@ class SecondScreen extends StatelessWidget {
               ),
 
               SizedBox(
-                height: 18,
+                height: 16,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -230,6 +231,42 @@ class SecondScreen extends StatelessWidget {
                   Text("view all",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.lightBlue,height: .4),),
                 ],
               ),
+
+              SizedBox(
+                height: 16,
+              ),
+                      Row(
+                        children: const <Widget>[
+                          Expanded(
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                backgroundImage: AssetImage("images/cat logo.png",), // no matter how big it is, it won't overflow
+                              ),
+                              title: Text('Cat'),
+                            ),
+                          ),
+
+                          Expanded(
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                backgroundImage: AssetImage("images/dog logo.png",), // no matter how big it is, it won't overflow
+                              ),
+                              title: Text('Dog'),
+                            ),
+                          ),
+
+                          Expanded(
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                backgroundImage: AssetImage("images/bird logo.png",), // no matter how big it is, it won't overflow
+                              ),
+                              title: Text('Bird'),
+                            ),
+                          ),
+
+
+                        ],
+                      )
 
 
 
