@@ -294,24 +294,38 @@ class SecondScreen extends StatelessWidget {
                   width: 180,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10), // <= No more error here :)
-                    color: Colors.purple.withOpacity(.4),
+                    color: Colors.blueAccent.withOpacity(.6),
                   ),
                   child: Padding(
                     padding: EdgeInsets.all(8),
-                    child:
-                    Row(
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
                           width: 16,
                         ),
-                        Container(
-                              child: Image.asset("images/dogs.png",fit: BoxFit.cover,)
-                          ),
+                        Row(
+                          children: [
+                            Container(
+                                  child: Image.asset("images/cat1.png",fit: BoxFit.cover,)
+                              ),
+                          ],
+                        ),
                       ],
                     ),
                   )
+              ),
+
+              SizedBox(
+                height: 16,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text("Bella",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.black,height: .4),),
+                  Text("BDT 5000",style: TextStyle(fontSize: 16,color: Colors.black,height: .4),),
+                ],
               ),
 
             ],
