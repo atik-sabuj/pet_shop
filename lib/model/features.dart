@@ -31,9 +31,9 @@ class Features {
 
 final List<Features> featuresList = [
   Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: true),
+  Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: false),
   Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: true),
-  Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: true),
-  Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: true),
+  Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: false),
   Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: true),
   Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: true),
   Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: true),

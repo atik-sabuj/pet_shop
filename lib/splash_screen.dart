@@ -422,7 +422,7 @@ class SecondScreen extends StatelessWidget {
                              padding: const EdgeInsets.all(8.0),
                              child: Image.asset(
                                featuresList[index].image.toString(),
-                               height: 200.0,
+                               height: 100.0,
                                width: 30.0,
                              ),
                            ),
@@ -432,6 +432,8 @@ class SecondScreen extends StatelessWidget {
                        Text(featuresList[index].name.toString()),
                        SizedBox(width: 8,),
                        Text(featuresList[index].price.toString()),
+                       featuresList[index].isFavorite==true ? Icon(Icons.ac_unit_sharp) : SizedBox(),
+
                      ],
                    ),
                  )),
