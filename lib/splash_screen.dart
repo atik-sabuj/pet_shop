@@ -389,57 +389,71 @@ class SecondScreen extends StatelessWidget {
 
   showFeaturesList() {
     return SizedBox(
-      height: 150,
-      child: ListView.builder(
+      height: 220,
+      child: ListView.separated(
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.all(8),
           itemCount: featuresList.length,
           itemBuilder: (BuildContext context, int index) {
-            return Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
+            return Column(
+              children: [
+                Card(
 
-             child:  Container(
-                 height: 100,
-                 width: 180,
-                 decoration: BoxDecoration(
-                   borderRadius: BorderRadius.circular(10),
-                   // <= No more error here :)
-                   color: Colors.blueAccent.withOpacity(.6),
-                 ),
-                 child: Padding(
-                   padding: EdgeInsets.all(8),
-                   child: Row(
-                     mainAxisAlignment: MainAxisAlignment.start,
-                     children: [
-                       ClipRRect(
-                         borderRadius: BorderRadius.circular(40.0),
-                         child: Container(
-                           color: Colors.white,
-                           child: Padding(
-                             padding: const EdgeInsets.all(8.0),
-                             child: Image.asset(
-                               featuresList[index].image.toString(),
-                               height: 100.0,
-                               width: 30.0,
-                             ),
-                           ),
-                         ),
-                       ),
-                       SizedBox(width: 8,),
-                       Text(featuresList[index].name.toString()),
-                       SizedBox(width: 8,),
-                       Text(featuresList[index].price.toString()),
-                       featuresList[index].isFavorite==true ? Icon(Icons.ac_unit_sharp) : SizedBox(),
+                  child: Container(
+                    height: 180,
+                    width: 220,
+                    color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(20.0),
+                            child: Container(
+                              color: Colors.white,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Image.asset(
+                                  featuresList[index].image.toString(),
+                                  height: 80.0,
+                                  // width: 180.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 24,
+                            width: 220,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(featuresList[index].name.toString()),
+                                SizedBox(width: 8,),
+                                Text(featuresList[index].name.toString()),
 
-                     ],
-                   ),
-                 )),
-
+                              ],
+                            ),
+                          ),
+                          Text(featuresList[index].name.toString()),
+                          Text(featuresList[index].name.toString()),
+                         // featuresList[index].isFavorite==true ? Icon(Icons.ac_unit_sharp) : SizedBox(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             );
-          }
+          }, separatorBuilder: (BuildContext context, int index) {
+            return Divider(
+              height: 8,
+              color: Colors.grey,
+            );
+      },
       ),
     );
   }
