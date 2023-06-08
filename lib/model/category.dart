@@ -24,6 +24,7 @@ final List<Category> categoryList = [
   Category(name: "Rabbit",image: "images/rabbit.png"),
   Category(name: "Fish",image: "images/fish.png"),
   Category(name: "Duck",image: "images/duck.png"),
+  Category(name: "Horse",image: "images/horse.png"),
   Category(name: "Others",image: "images/others.png"),
 
 ];

@@ -36,9 +36,6 @@ final List<Features> featuresList = [
   Features(name: "Rabbit",image: "images/rabbit1.png", price: 7000.0, location: "Katabon", age: "2 years", isFavorite: false),
   Features(name: "Fish",image: "images/fish1.png", price: 1000.0, location: "Krishi Market", age: "1 years", isFavorite: true),
   Features(name: "Duck",image: "images/duck1.png", price: 1500.0, location: "Rayer Bazar", age: "1 years", isFavorite: true),
-  Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: true),
-  Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: true),
-  Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: true),
-  Features(name: "Cat",image: "images/cat1.png", price: 5000.0, location: "Mdpur", age: "2 years", isFavorite: true),
+  Features(name: "Horse",image: "images/horse.png", price: 5000.0, location: "Puran Dhaka", age: "5 years", isFavorite: true),
 ];
 
