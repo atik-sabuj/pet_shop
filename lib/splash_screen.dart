@@ -71,10 +71,7 @@ class SecondScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SizedBox(
-                        width: MediaQuery
-                            .of(context)
-                            .size
-                            .width - 90,
+                        width: MediaQuery.of(context).size.width - 90,
                         child: TextField(
                           textAlign: TextAlign.start,
                           keyboardType: TextInputType.text,
