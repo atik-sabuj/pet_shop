@@ -47,13 +47,13 @@ showFeaturesList() {
                           children: [
                             Text(featuresList[index].name.toString()),
                             SizedBox(width: 8,),
-                            Text(featuresList[index].name.toString()),
+                            Text(featuresList[index].age.toString()),
 
                           ],
                         ),
                       ),
-                      Text(featuresList[index].name.toString()),
-                      Text(featuresList[index].name.toString()),
+                      Text(featuresList[index].price.toString()),
+                      Text(featuresList[index].location.toString()),
                       // featuresList[index].isFavorite==true ? Icon(Icons.ac_unit_sharp) : SizedBox(),
                     ],
                   ),

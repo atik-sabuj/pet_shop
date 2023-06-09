@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:pet_shop/model/category.dart';
-import 'package:pet_shop/model/features.dart';
 import 'package:pet_shop/pages/categories_list.dart';
 import 'package:pet_shop/pages/features_list.dart';
 
