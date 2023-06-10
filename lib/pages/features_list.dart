@@ -46,7 +46,7 @@ showFeaturesList() {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(featuresList[index].name.toString()),
-                            SizedBox(width: 8,),
+                            const SizedBox(width: 8,),
                             Text(featuresList[index].age.toString()),
 
                           ],
@@ -63,7 +63,7 @@ showFeaturesList() {
           ],
         );
       }, separatorBuilder: (BuildContext context, int index) {
-      return Divider(
+      return const Divider(
         height: 8,
         color: Colors.grey,
       );

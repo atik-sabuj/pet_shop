@@ -39,7 +39,7 @@ showCategoryList() {
                         ),
                       ),
                     ),
-                    SizedBox(width: 8,),
+                    const SizedBox(width: 8,),
                     Text(categoryList[index].name.toString()),
                   ],
                 )

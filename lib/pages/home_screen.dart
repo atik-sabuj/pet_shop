@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Adopt a Friend"),
+        title: const Text("Adopt a Friend"),
         actions: [
           IconButton(
             onPressed: () {},
@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Color(0xffFDFDFF),
+          color: const Color(0xffFDFDFF),
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
@@ -39,19 +39,19 @@ class HomeScreen extends StatelessWidget {
                           keyboardType: TextInputType.text,
                           decoration: InputDecoration(
                             hintText: 'Search...',
-                            prefixIcon: Icon(
+                            prefixIcon: const Icon(
                               Icons.search,
                               color: Colors.red,
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                   width: 0,
                                   style: BorderStyle.none,
                                   color: Colors.red),
                             ),
                             filled: true,
-                            contentPadding: EdgeInsets.all(16),
+                            contentPadding: const EdgeInsets.all(16),
                             fillColor: Colors.white,
                           ),
                         ),
@@ -76,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          child: Icon(
+                          child: const Icon(
                             Icons.sort,
                             color: Colors.white,
                             size: 24,
@@ -87,7 +87,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Container(
@@ -108,7 +108,7 @@ class HomeScreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
+                                const Text(
                                   "Pet Adoption made easy",
                                   style: TextStyle(
                                       fontSize: 24,
@@ -125,7 +125,7 @@ class HomeScreen extends StatelessWidget {
                                             8.0),
                                       ),
                                     ),
-                                    child: Text(
+                                    child: const Text(
                                       "Shop now",
                                     ))
                               ],
@@ -141,7 +141,7 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Row(
@@ -171,10 +171,10 @@ class HomeScreen extends StatelessWidget {
                                     height: 50,
                                     width: 50,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 8,
                                   ),
-                                  Text(
+                                  const Text(
                                     "Shop",
                                     style: TextStyle(
                                         fontSize: 20,
@@ -210,10 +210,10 @@ class HomeScreen extends StatelessWidget {
                                     height: 50,
                                     width: 50,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 8,
                                   ),
-                                  Text(
+                                  const Text(
                                     "Adoptions",
                                     style: TextStyle(
                                         fontSize: 20,
@@ -227,10 +227,10 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
@@ -251,7 +251,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
 
@@ -259,10 +259,10 @@ class HomeScreen extends StatelessWidget {
                 showCategoryList(), //Category List like Cat,Dog,Bird and others
 
 
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
@@ -283,7 +283,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
 
