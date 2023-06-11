@@ -54,7 +54,7 @@ showFeaturesList() {
                       ),
                       Text(featuresList[index].price.toString()),
                       Text(featuresList[index].location.toString()),
-                      // featuresList[index].isFavorite==true ? Icon(Icons.ac_unit_sharp) : SizedBox(),
+                       //featuresList[index].isFavorite==true ? Icon(Icons.ac_unit_sharp) : SizedBox(),
                     ],
                   ),
                 ),

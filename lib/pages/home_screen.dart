@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'package:pet_shop/pages/categories_list.dart';
-import 'package:pet_shop/pages/features_list.dart';
+import 'package:pet_shop/view_model/categories_list.dart';
+import 'package:pet_shop/view_model/features_list.dart';
+
 
 class HomeScreen extends StatelessWidget {
 
