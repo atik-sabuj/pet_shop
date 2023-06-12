@@ -289,7 +289,7 @@ class HomeScreen extends StatelessWidget {
                 ),
 
 
-                showFeaturesList(),
+                showFeaturesList(), //Features like Cat,Dog,Bird and others
 
               ],
             ),
